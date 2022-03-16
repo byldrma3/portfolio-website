@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header style="margin-bottom:0px">
+        <a href="index.html" class="logo">
+            <figure>
+                <img src="https://cdn-icons-png.flaticon.com/512/1/1524.png" width="35" alt="logo">
+            </figure>
+            <span>Bahadır Yıldırım</span>
+        </a>
+        <nav id="nav-menu">
+            <a href="index.html" class="list-item">Anasayfa</a>
+            <a href="about.html" class="list-item">Hakkımda</a>
+            <a href="contact.html" class="list-item">iletişim</a>
+            <a href="skills.html" class="list-item btn">Yaptığım İşler</a>
+        </nav>
+        <div class="nav_toggle" id="nav-toggle">
+            <i class="uil uil-bars"></i>
+        </div>
+    </header>
+    <main>
+        <section class="home-page">
+            <div class="container">
+                <img src="./img/13.png" alt="color" class="layer" data-speed="5" >
+                <h1 class="h1-animate" style="margin-top: 100px;">Güzel, kullanıcı dostu ürünler yaratma konusunda tutkulu bir önyüz geliştiricisi</h1>
+                <h3 class="h3-animate"> <a target="_blank" href="https://www.asilzadeegitim.com">Asilzade Eğitim'de</a> ve <a target="_blank" href="https://www.durmaznakliyat.com">Durmaz Nakliyat'a</a> Önyüz ve Arkayüz Geliştiricisi. 2021 Dumlupınar Üniversitesi Mezunu.</h3>
+                <a href="skills.html" class="btn btn-animate">Yaptığım İşler</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="top">
+                <a href="#" class="logo">
+                    <figure>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1/1524.png" width="35" alt="logo">
+                    </figure>
+                </a>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/bahadirw3/"  target="_blank">İnstagram</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/bahad%C4%B1r-y%C4%B1ld%C4%B1r%C4%B1m-97992b164/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Hakkımda</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+            <p>Copyright © 2021 Bahadır Yıldırım. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="social-icon">
+        <a href="https://www.instagram.com/bahadirw3/"  target="_blank"><i class="uil uil-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/bahad%C4%B1r-y%C4%B1ld%C4%B1r%C4%B1m-97992b164/" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+    </div>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+        document.addEventListener("mousemove" , parallax);
+        function parallax(e){
+           document.querySelectorAll('.layer').forEach(function(move){
+               const moving_value = move.getAttribute("data-speed");
+               const x = (e.clientX * moving_value) / 100;
+               const y = (e.clientY * moving_value) / 100;
+               move.style.transform = "translateX(" + x +"px) translateY(" + y +"px)";
+           
+       });
+    }
+    </script>
+</body>
+</html>
